@@ -3,18 +3,13 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MyTabBar from './CustomTab';
 import { ThemeColors } from '../theme/colors';
+import Home from '../screens/Home';
 
 type Props = {};
 
 const Tabs = createBottomTabNavigator();
 
-const Home = () => {
-  return (
-    <View style={{ flex: 1, backgroundColor: ThemeColors.background.dark }}>
-      <Text>Hello</Text>
-    </View>
-  );
-};
+
 const Tab = (props: Props) => {
   return (
     <Tabs.Navigator

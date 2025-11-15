@@ -50,12 +50,12 @@ export default function MyTabBar({ state, descriptors, navigation }: any) {
 
       {state.routes.map((route: any, index: any) => {
         const { options } = descriptors[route.key];
-        const label =
-          options.tabBarLabel !== undefined
-            ? options.tabBarLabel
-            : options.title !== undefined
-            ? options.title
-            : route.name;
+        // const label =
+        //   options.tabBarLabel !== undefined
+        //     ? options.tabBarLabel
+        //     : options.title !== undefined
+        //     ? options.title
+        //     : route.name;
 
         let Icon = icons[route.name];
 
@@ -82,7 +82,7 @@ export default function MyTabBar({ state, descriptors, navigation }: any) {
 
         return (
           <PlatformPressable
-            key={route.key}
+            key={index}
             href={buildHref(route.name, route.params)}
             accessibilityState={isFocused ? { selected: true } : {}}
             accessibilityLabel={options.tabBarAccessibilityLabel}
@@ -92,9 +92,9 @@ export default function MyTabBar({ state, descriptors, navigation }: any) {
             style={styles.tabButtonWrapper}
           >
             <View style={styles.tabButton}>
-              <Icon 
-                color={isFocused ? '#FFFFFF' : ThemeColors.icon.dark} 
-                size={24} 
+              <Icon
+                color={isFocused ? '#FFFFFF' : ThemeColors.icon.dark}
+                size={24}
               />
             </View>
           </PlatformPressable>
