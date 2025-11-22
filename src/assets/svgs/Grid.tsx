@@ -1,6 +1,6 @@
-import * as React from "react";
-import Svg, { Path } from "react-native-svg";
-const GridSvg = (props:any) => (
+import * as React from 'react';
+import Svg, { Path } from 'react-native-svg';
+const GridSvg = (props: any) => (
   <Svg
     width="800px"
     height="800px"
@@ -11,16 +11,16 @@ const GridSvg = (props:any) => (
   >
     <Path
       d="M16.19 2H12.75V8V8.75V13.75H22V8.75V8V7.81C22 4.17 19.83 2 16.19 2Z"
-      fill="#ffff"
+      fill="#E7E7E7"
     />
     <Path
       d="M2 10.25V15.25V15.75V16.19C2 19.83 4.17 22 7.81 22H11.25V15.75V15.25V10.25H2Z"
-      fill="#ffff"
+      fill="#E7E7E7"
     />
-    <Path d="M11.25 2V8.75H2V7.81C2 4.17 4.17 2 7.81 2H11.25Z" fill="#ffff" />
+    <Path d="M11.25 2V8.75H2V7.81C2 4.17 4.17 2 7.81 2H11.25Z" fill="#E7E7E7" />
     <Path
       d="M22 15.25V16.19C22 19.83 19.83 22 16.19 22H12.75V15.25H22Z"
-      fill="#ffff"
+      fill="#E7E7E7"
     />
   </Svg>
 );

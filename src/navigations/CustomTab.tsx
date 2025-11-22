@@ -4,9 +4,16 @@ import { PlatformPressable } from '@react-navigation/elements';
 import { ThemeColors } from '../theme/colors';
 import { Heart, House, Play, UserRound } from 'lucide-react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import { useEffect, useRef } from 'react';
+import { ElementType, useEffect, useRef } from 'react';
 
-const icons: any = {
+interface IconsInterface {
+  Home: ElementType;
+  Favorites: ElementType;
+  Videos: ElementType;
+  Profile: ElementType;
+}
+
+const icons:any = {
   Home: House,
   Favorites: Heart,
   Videos: Play,
@@ -93,7 +100,7 @@ export default function MyTabBar({ state, descriptors, navigation }: any) {
           >
             <View style={styles.tabButton}>
               <Icon
-                color={isFocused ? '#FFFFFF' : ThemeColors.icon.dark}
+                color={isFocused ? '#E7E7E7' : ThemeColors.icon.dark}
                 size={24}
               />
             </View>

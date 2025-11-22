@@ -39,7 +39,7 @@ export const ThemeColors = {
       muted: '#8E8E8E',
     },
     dark: {
-      primary: '#FFFFFF',
+      primary: '#E7E7E7',
       secondary: '#D1D1D1',
       muted: '#555555',
     },
@@ -62,7 +62,7 @@ export const ThemeColors = {
   // Icon Colors
   icon: {
     light: '#1A1A1A',
-    dark: '#FFFFFF',
+    dark: '#E7E7E7',
     muted: '#9A9A9A',
   },
 

@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MyTabBar from './CustomTab';
 import { ThemeColors } from '../theme/colors';
 import Home from '../screens/Home';
+import Videos from '../screens/Videos';
 
 type Props = {};
 
@@ -19,7 +20,7 @@ const Tab = (props: Props) => {
     >
       <Tabs.Screen name="Home" component={Home} />
       <Tabs.Screen name="Favorites" component={Home} />
-      <Tabs.Screen name="Videos" component={Home} />
+      <Tabs.Screen name="Videos" component={Videos} />
       <Tabs.Screen name="Profile" component={Home} />
     </Tabs.Navigator>
   );

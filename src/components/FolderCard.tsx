@@ -4,7 +4,12 @@ import { ThemeColors } from '../theme/colors';
 import { Folder, MoreHorizontal, MoreVertical } from 'lucide-react-native';
 
 type Props = {
-  folder: any;
+  folder: {
+    name: string;
+    id: number | string;
+    color: string;
+    count: number | string;
+  };
 };
 
 const FolderCard = ({ folder }: Props) => {
@@ -17,7 +22,7 @@ const FolderCard = ({ folder }: Props) => {
       <View style={[styles.folderIconContainer]}>
         <Folder size={32} color={folder.color} fill={folder.color} />
         <View
-          style={[styles.seperator,{backgroundColor:'transparent'}]}
+          style={[styles.seperator, { backgroundColor: 'transparent' }]}
         ></View>
       </View>
       <View style={{ flex: 1 }}>
@@ -30,9 +35,7 @@ const FolderCard = ({ folder }: Props) => {
             <MoreHorizontal size={24} color={ThemeColors.text.dark.muted} />
           </TouchableOpacity>
         </View>
-        <View
-          style={styles.seperator}
-        ></View>
+        <View style={styles.seperator}></View>
       </View>
     </TouchableOpacity>
   );
@@ -78,11 +81,11 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: ThemeColors.text.dark.muted,
   },
-  seperator:{
+  seperator: {
     width: '100%',
     height: 3,
-    backgroundColor:ThemeColors.background.seperator,
+    backgroundColor: ThemeColors.background.seperator,
     marginTop: 12,
     borderRadius: 10,
-  }
+  },
 });

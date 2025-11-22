@@ -5,13 +5,18 @@ import {
   Dimensions,
   TouchableOpacity,
 } from 'react-native';
-import React from 'react';
+import React, { ElementType } from 'react';
 import { ThemeColors } from '../theme/colors';
 
 const { width } = Dimensions.get('window');
 const CARD_WIDTH = (width - 48) / 2;
 type Props = {
-  category: any;
+  category: {
+    icon: ElementType;
+    id: number | string;
+    title: string;
+    count: number | string;
+  };
 };
 
 const CategoryCard = ({ category }: Props) => {
